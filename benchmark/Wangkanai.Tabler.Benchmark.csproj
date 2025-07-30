@@ -5,8 +5,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <!-- Blazor Components functionality to be implemented directly or via NuGet when needed -->
-        <!-- <ProjectReference Include="$(RepoRoot)\Blazor\src\Components\Wangkanai.Blazor.Components.csproj" /> -->
         <ProjectReference Include="..\src\Core\Wangkanai.Tabler.csproj" />
     </ItemGroup>
 
