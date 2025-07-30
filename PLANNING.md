@@ -26,7 +26,7 @@ Create a comprehensive, production-ready Blazor component library that provides 
 ### Multi-Project Architecture
 
 ```
-Wangkanai.Tabler/
+Tabler/
 ├── src/
 │   ├── Core/                           # Wangkanai.Tabler.csproj
 │   │   ├── Extensions/                 # Service registration extensions
@@ -89,7 +89,7 @@ graph TD
     B --> E[Microsoft.AspNetCore.Components.Web]
     C --> F[SCSS Build Pipeline]
     C --> G[@tabler/core CSS]
-    
+
     H[Tests] --> A
     I[Benchmarks] --> A
     J[Samples] --> A
@@ -98,7 +98,7 @@ graph TD
 ## 🔧 Technology Stack
 
 ### Core Framework
-- **.NET 8.0**: Target framework for all projects
+- **.NET 9.0**: Target framework for all projects
 - **C# 12**: Latest language features with nullable reference types
 - **Blazor Server/WebAssembly**: Dual hosting model support
 - **ASP.NET Core Components**: Web component framework
@@ -140,16 +140,16 @@ graph TD
 ### Development Environment
 
 #### Essential Tools
-- **Visual Studio 2022 17.8+** or **JetBrains Rider 2023.3+**
-  - .NET 8.0 SDK support
+- **Visual Studio 2022 17.13+** or **JetBrains Rider 2025.1+**
+  - .NET 9.0 SDK support
   - Blazor debugging capabilities
   - SCSS syntax highlighting
 
-- **.NET 8.0 SDK**
+- **.NET 9.0 SDK**
   - Download: https://dotnet.microsoft.com/download/dotnet/8.0
   - Required for all development and building
 
-- **Node.js 18.x LTS+**
+- **Node.js 22.x LTS+**
   - Download: https://nodejs.org/
   - Required for SCSS compilation and asset processing
   - Includes npm package manager
@@ -284,8 +284,8 @@ graph TD
 ### Quick Setup
 ```bash
 # Clone the repository
-git clone https://github.com/wangkanai/wangkanai.git
-cd wangkanai/Tabler
+git clone https://github.com/wangkanai/tabler.git
+cd tabler
 
 # Install dependencies
 cd src/Web && npm install && cd ../..
@@ -310,8 +310,8 @@ cd src/Web && npm run watch
 
 ---
 
-**Document Version**: 2.0  
-**Last Updated**: 2025-07-21  
-**Target Framework**: .NET 8.0  
-**Tabler Version**: 1.4.0+  
+**Document Version**: 2.0
+**Last Updated**: 2025-0730
+**Target Framework**: .NET 9.0
+**Tabler Version**: 1.4.0+
 **Maintainer**: Wangkanai Development Team

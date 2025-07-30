@@ -53,7 +53,7 @@ npm run clean && npm run build
 
 ```bash
 # Run all tests
-dotnet test tests/Wangkanai.Tabler.Tests.csproj --configuration Release
+dotnet test tests/Wangkanai.Tabler.UnitTests.csproj --configuration Release
 
 # Run benchmarks
 dotnet run --project benchmark/Wangkanai.Tabler.Benchmark.csproj -c Release
@@ -90,11 +90,11 @@ Tabler/
 
 ### Technology Stack
 
-- **.NET 8.0**: Target framework
+- **.NET 9.0**: Target framework
 - **Blazor Server/WebAssembly**: Component runtime
 - **Tabler CSS 1.4.0+**: Base stylesheet (CSS-only approach)
 - **SCSS**: Custom styling and theming
-- **xUnit**: Unit testing
+- **xUnit.v3**: Unit testing
 - **BenchmarkDotNet**: Performance testing
 
 ## Design Principles
@@ -548,9 +548,9 @@ dotnet run --project benchmark/ -c Release --filter "*Button*"
 
 ---
 
-**Document Version**: 1.0
-**Last Updated**: 2025-01-21
-**Target Framework**: .NET 8.0
+**Document Version**: 1.1
+**Last Updated**: 2025-01-30
+**Target Framework**: .NET 9.0
 **Tabler Version**: 1.4.0+
 
 ## Quick Start for Claude Code Sessions
@@ -584,7 +584,7 @@ During this development session, significant progress was made on **Milestone 3:
 - **Key Classes**: `SelectOption.cs` model with factory methods for enums and dictionaries
 - **Accessibility**: Full keyboard navigation and ARIA compliance
 
-#### ✅ TablerCheckbox Component  
+#### ✅ TablerCheckbox Component
 - **Implementation**: Checkbox controls with multiple layout variants
 - **Features**: Default, Inline, Switch, and Reverse layouts with indeterminate state support
 - **Testing**: 44 logic tests + 38 enum tests (82 total) with 100% pass rate
@@ -673,16 +673,16 @@ This session represents significant progress toward completing the form componen
 
 ---
 
-**Session Date**: July 21, 2025  
-**Components Added**: TablerSelect, TablerCheckbox, TablerTextarea, TablerPassword  
-**Tests Added**: 244 unit tests  
+**Session Date**: July 21, 2025
+**Components Added**: TablerSelect, TablerCheckbox, TablerTextarea, TablerPassword
+**Tests Added**: 244 unit tests
 **Milestone 3 Progress**: 85% complete
 
 ## Current Session State
 
-**Current Status**: Form components development session active  
-**Progress**: TablerPassword component just completed  
-**Next Priority**: TablerRadio component implementation  
+**Current Status**: Form components development session active
+**Progress**: TablerPassword component just completed
+**Next Priority**: TablerRadio component implementation
 **Session State**: Documented in [SESSION-STATE.md](./SESSION-STATE.md)
 
 ### Quick Session Continuation
