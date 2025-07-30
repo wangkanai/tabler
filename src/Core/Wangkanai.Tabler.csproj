@@ -1,14 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
-
     <PropertyGroup>
         <NoWarn>8603</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
-        <!-- Validation functionality to be implemented directly or via NuGet when needed -->
-        <!-- <ProjectReference Include="$(RepoRoot)\Validation\src\Wangkanai.Validation.csproj" /> -->
-		<!-- <ProjectReference Include="$(RepoRoot)\Blazor\src\Core\Wangkanai.Blazor.csproj" />-->
-
         <ProjectReference Include="..\Components\Wangkanai.Tabler.Components.csproj" PrivateAssets="all" />
         <ProjectReference Include="..\Web\Wangkanai.Tabler.Components.Web.csproj" PrivateAssets="all" />
     </ItemGroup>

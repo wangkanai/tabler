@@ -1,20 +1,22 @@
 <Project>
-	<!-- Core project properties from parent repository -->
 	<PropertyGroup>
+		<VersionPrefix>4.4.0</VersionPrefix>
+		<Title>Wangkanai Tabler</Title>
+		<PackageTags>aspnetcore;blazor;tabler;</PackageTags>
+		<Description>A robust integration of the Tabler CSS framework into Blazor. Crafted for developing responsive, mobile-first, and desktop-first web applications. Enhance productivity, reduce development time, and ensure your applications look stunning on any device. Power up your Blazor projects with Tabler</Description>
 		<Company>Wangkanai</Company>
 		<Authors>Sarin Na Wangkanai</Authors>
 		<Copyright>©2014-2025 Sarin Na Wangkanai, All rights reserved</Copyright>
 
 		<RepositoryType>git</RepositoryType>
 		<RepositoryUrl>git://github.com/wangkanai/tabler</RepositoryUrl>
-
 		<PackageProjectUrl>https://github.com/wangkanai/tabler</PackageProjectUrl>
 		<PackageLicense>https://github.com/wangkanai/tabler/blob/main/LICENSE</PackageLicense>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
@@ -28,35 +30,6 @@
 		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
 	</PropertyGroup>
 
-	<PropertyGroup>
-		<RepoRoot Condition=" '$(RepoRoot)' == '' OR !HasTrailingSlash('$(RepoRoot)') ">$(MSBuildThisFileDirectory)</RepoRoot>
-	</PropertyGroup>
-
-	<!-- Tabler-specific properties -->
-	<PropertyGroup>
-		<VersionPrefix>4.4.0</VersionPrefix>
-		<Title>Wangkanai Tabler</Title>
-		<PackageTags>aspnetcore;blazor;tabler;</PackageTags>
-		<Description>A robust integration of the Tabler CSS framework into Blazor. Crafted for developing responsive, mobile-first, and desktop-first web applications. Enhance productivity, reduce development time, and ensure your applications look stunning on any device. Power up your Blazor projects with Tabler</Description>
-	</PropertyGroup>
-
-	<PropertyGroup>
-		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
-	</PropertyGroup>
-
-	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
-		<ItemGroup>
-			<!-- Filter out unnecessary files -->
-			<_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
-		</ItemGroup>
-		<!-- Print batches for debug purposes -->
-		<Message Text="Batch for .nupkg: ReferenceCopyLocalPaths = @(_ReferenceCopyLocalPaths), ReferenceCopyLocalPaths.DestinationSubDirectory = %(_ReferenceCopyLocalPaths.DestinationSubDirectory) Filename = %(_ReferenceCopyLocalPaths.Filename) Extension = %(_ReferenceCopyLocalPaths.Extension)" Importance="High" Condition="'@(_ReferenceCopyLocalPaths)' != ''" />
-		<ItemGroup>
-			<!-- Add file to package with consideration of sub folder. If empty, the root folder is chosen. -->
-			<BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
-		</ItemGroup>
-	</Target>
-
 	<PropertyGroup Condition="'$(MSBuildProjectName)' == 'Wangkanai.Tabler'">
 		<PackageIcon>wangkanai-logo.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
@@ -66,5 +39,13 @@
 		<None Include="$(RepoRoot)\assets\wangkanai-logo.png" Pack="true" PackagePath="\" />
 		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
+
+	<PropertyGroup>
+		<RepoRoot Condition=" '$(RepoRoot)' == '' OR !HasTrailingSlash('$(RepoRoot)') ">$(MSBuildThisFileDirectory)</RepoRoot>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
 
 </Project>

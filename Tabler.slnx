@@ -13,12 +13,17 @@
     <File Path="sign.ps1" />
     <File Path="TASKS.md" />
     <File Path=".gitignore" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+    <File Path=".editorconfig" />
   </Folder>
   <Folder Name="/benchmark/">
     <Project Path="benchmark\Wangkanai.Tabler.Benchmark.csproj" Type="C#" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests\Wangkanai.Tabler.Tests.csproj" Type="C#" />
+    <Project Path="tests\Functional\Wangkanai.Tabler.FunctionalTests.csproj" Type="Classic C#" />
+    <Project Path="tests\Integration\Wangkanai.Tabler.IntegrationTests.csproj" Type="Classic C#" />
+    <Project Path="tests\Unit\Wangkanai.Tabler.UnitTests.csproj" Type="Classic C#" />
   </Folder>
   <Project Path="src\Components\Wangkanai.Tabler.Components.csproj" Type="C#" />
   <Project Path="src\Core\Wangkanai.Tabler.csproj" Type="C#" />

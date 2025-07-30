@@ -13,4 +13,11 @@
         <ProjectReference Include="..\src\Components\Wangkanai.Tabler.Components.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Functional\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="Functional\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="Functional\obj\Wangkanai.Tabler.FunctionalTests.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="Functional\xunit.runner.json" />
+    </ItemGroup>
+
 </Project>
