@@ -91,7 +91,7 @@
     {
         if (OnSubmit.HasDelegate)
         {
-            await OnSubmit.InvokeAsync();
+            await OnSubmit.InvokeAsync(EventArgs.Empty);
             return;
         }
 

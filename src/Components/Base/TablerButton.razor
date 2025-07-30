@@ -153,6 +153,6 @@
     {
         if (Disabled || Loading) return;
         
-        await OnClick.InvokeAsync();
+        await OnClick.InvokeAsync(EventArgs.Empty);
     }
 }

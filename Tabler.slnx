@@ -1,8 +1,22 @@
 <Solution>
+  <Folder Name="/.claude/">
+    <File Path="PRD.md" />
+    <File Path="PLANNING.md" />
+    <File Path="CLAUDE.md" />
+  </Folder>
+  <Folder Name="/.github/" />
+  <Folder Name="/.solutions/">
+    <File Path="README.md" />
+    <File Path="build.ps1" />
+    <File Path="Directory.Build.props" />
+    <File Path="LICENSE" />
+    <File Path="sign.ps1" />
+    <File Path="TASKS.md" />
+    <File Path=".gitignore" />
+  </Folder>
   <Folder Name="/benchmark/">
     <Project Path="benchmark\Wangkanai.Tabler.Benchmark.csproj" Type="C#" />
   </Folder>
-  <Folder Name="/src/" />
   <Folder Name="/tests/">
     <Project Path="tests\Wangkanai.Tabler.Tests.csproj" Type="C#" />
   </Folder>
