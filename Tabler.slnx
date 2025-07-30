@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/benchmark/">
+    <Project Path="benchmark\Wangkanai.Tabler.Benchmark.csproj" Type="C#" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/tests/">
+    <Project Path="tests\Wangkanai.Tabler.Tests.csproj" Type="C#" />
+  </Folder>
+  <Project Path="src\Components\Wangkanai.Tabler.Components.csproj" Type="C#" />
+  <Project Path="src\Core\Wangkanai.Tabler.csproj" Type="C#" />
+  <Project Path="src\Web\Wangkanai.Tabler.Components.Web.csproj" Type="C#" />
+</Solution>

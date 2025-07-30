@@ -5,7 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="$(RepoRoot)\Validation\src\Wangkanai.Validation.csproj" />
+        <!-- Validation functionality to be implemented directly or via NuGet when needed -->
+        <!-- <ProjectReference Include="$(RepoRoot)\Validation\src\Wangkanai.Validation.csproj" /> -->
 		<!-- <ProjectReference Include="$(RepoRoot)\Blazor\src\Core\Wangkanai.Blazor.csproj" />-->
 
         <ProjectReference Include="..\Components\Wangkanai.Tabler.Components.csproj" PrivateAssets="all" />
